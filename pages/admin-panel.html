@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Адмін-панель - Lib&Art Project</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lib&Art Project</h1>
+      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
+      <h2>Адміністративна панель - Lib&Art Project</h2>
+      <nav>
+        <ul>
+          <li><a href="admin-products.html">Управління товарами</a></li>
+          <li><a href="admin-orders.html">Замовлення</a></li>
+          <li><a href="admin-users.html">Користувачі</a></li>
+          <li><a href="index.html">Перейти на сайт</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Основна інформація</h2>
+        <div class="dashboard-stats">
+          <div class="stat-box">
+            <h3>Загальна статистика</h3>
+            <table>
+              <tr>
+                <td>Всього книг:</td>
+                <td>458</td>
+              </tr>
+              <tr>
+                <td>Зареєстрованих користувачів:</td>
+                <td>1,245</td>
+              </tr>
+              <tr>
+                <td>Активних замовлень:</td>
+                <td>32</td>
+              </tr>
+              <tr>
+                <td>Замовлень сьогодні:</td>
+                <td>8</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Швидкі дії</h2>
+        <div class="quick-actions">
+          <a href="admin-add-product.html">Додати новий товар</a>
+          <a href="admin-orders.html?filter=new">Переглянути нові замовлення</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Останні замовлення</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID замовлення</th>
+              <th>Клієнт</th>
+              <th>Дата</th>
+              <th>Сума</th>
+              <th>Статус</th>
+              <th>Дії</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4587</td>
+              <td>Олена Петренко</td>
+              <td>13-03-2025</td>
+              <td>1,250 грн</td>
+              <td>Нове</td>
+              <td>
+                <a href="admin-order-details.html?id=4587">Переглянути</a>
+                <a href="admin-order-process.html?id=4587">Обробити</a>
+              </td>
+            </tr>
+            <tr>
+              <td>4586</td>
+              <td>Іван Ковальчук</td>
+              <td>13-03-2025</td>
+              <td>650 грн</td>
+              <td>Оплачено</td>
+              <td>
+                <a href="admin-order-details.html?id=4586">Переглянути</a>
+                <a href="admin-order-process.html?id=4586">Обробити</a>
+              </td>
+            </tr>
+            <tr>
+              <td>4585</td>
+              <td>Марія Шевченко</td>
+              <td>12-03-2025</td>
+              <td>920 грн</td>
+              <td>Відправлено</td>
+              <td>
+                <a href="admin-order-details.html?id=4585">Переглянути</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="admin-orders.html">Переглянути всі замовлення</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+      <p>Адміністративна панель</p>
+    </footer>
+  </body>
+</html>

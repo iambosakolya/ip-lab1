@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Реєстрація - Lib&Art Project</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lib&Art Project</h1>
+      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="collections.html">Книжкові колекції</a></li>
+          <li>
+            <a href="cart.html"
+              ><img src="../assets/logos/shopping-cart-icon-btn.svg" alt="Кошик" />
+              Кошик</a
+            >
+          </li>
+          <li>
+            <a href="login.html"
+              ><img src="../assets/logos/login-icon-btn.svg" alt="Вхід" /> Вхід</a
+            >
+          </li>
+          <li><a href="register.html">Реєстрація</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Реєстрація нового користувача</h2>
+        <form action="register-process.html" method="post">
+          <div>
+            <label for="name">Повне ім'я:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div>
+            <label for="confirm-password">Підтвердження пароля:</label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              required
+            />
+          </div>
+          <div>
+            <label for="address">Адреса доставки:</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+          </div>
+          <div>
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div>
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">Я погоджуюся з умовами використання</label>
+          </div>
+          <button type="submit">Зареєструватися</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+      <p>Контакти: info@libartproject.ua | +380 44 123 4567</p>
+    </footer>
+  </body>
+</html>

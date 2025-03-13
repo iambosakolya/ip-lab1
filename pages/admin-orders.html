@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Управління замовленнями - Lib&Art Project</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lib&Art Project</h1>
+      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
+      <nav>
+        <ul>
+          <li><a href="admin-products.html">Управління товарами</a></li>
+          <li><a href="admin-orders.html">Замовлення</a></li>
+          <li><a href="admin-users.html">Користувачі</a></li>
+          <li><a href="index.html">Перейти на сайт</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Управління замовленнями</h2>
+
+        <div class="order-filters">
+          <form action="admin-orders.html" method="get">
+            <div>
+              <label for="order-id">ID замовлення:</label>
+              <input type="text" id="order-id" name="order-id" />
+            </div>
+            <div>
+              <label for="customer">Клієнт:</label>
+              <input type="text" id="customer" name="customer" />
+            </div>
+            <div>
+              <label for="status">Статус:</label>
+              <select id="status" name="status">
+                <option value="">Всі статуси</option>
+                <option value="new">Нове</option>
+                <option value="paid">Оплачено</option>
+                <option value="processing">В обробці</option>
+                <option value="shipped">Відправлено</option>
+                <option value="delivered">Доставлено</option>
+                <option value="cancelled">Скасовано</option>
+              </select>
+            </div>
+            <div>
+              <label for="date-from">Дата від:</label>
+              <input type="date" id="date-from" name="date-from" />
+              <label for="date-to">до:</label>
+              <input type="date" id="date-to" name="date-to" />
+            </div>
+            <button type="submit">Застосувати фільтри</button>
+          </form>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Дата</th>
+              <th>Клієнт</th>
+              <th>Сума</th>
+              <th>Спосіб оплати</th>
+              <th>Статус</th>
+              <th>Дії</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4587</td>
+              <td>13-03-2025</td>
+              <td>Олена Петренко</td>
+              <td>1,250 грн</td>
+              <td>Карта</td>
+              <td>Нове</td>
+              <td>
+                <a href="admin-order-details.html?id=4587">Переглянути</a>
+                <a href="admin-order-edit.html?id=4587">Редагувати</a>
+                <a href="#" onclick="changeStatus(4587, 'processing')"
+                  >Змінити статус</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>4586</td>
+              <td>13-03-2025</td>
+              <td>Іван Ковальчук</td>
+              <td>650 грн</td>
+              <td>Карта</td>
+              <td>Оплачено</td>
+              <td>
+                <a href="admin-order-details.html?id=4586">Переглянути</a>
+                <a href="admin-order-edit.html?id=4586">Редагувати</a>
+                <a href="#" onclick="changeStatus(4586, 'processing')"
+                  >Змінити статус</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>4585</td>
+              <td>12-03-2025</td>
+              <td>Марія Шевченко</td>
+              <td>920 грн</td>
+              <td>При отриманні</td>
+              <td>Відправлено</td>
+              <td>
+                <a href="admin-order-details.html?id=4585">Переглянути</a>
+                <a href="admin-order-edit.html?id=4585">Редагувати</a>
+                <a href="#" onclick="changeStatus(4585, 'delivered')"
+                  >Змінити статус</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>4584</td>
+              <td>11-03-2025</td>
+              <td>Василь Коваль</td>
+              <td>1,470 грн</td>
+              <td>Карта</td>
+              <td>Доставлено</td>
+              <td>
+                <a href="admin-order-details.html?id=4584">Переглянути</a>
+                <a href="admin-order-edit.html?id=4584">Редагувати</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <a href="#">&laquo;</a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">&raquo;</a>
+        </div>
+
+        <div class="export-actions">
+          <a href="admin-export-orders.html?format=csv">Експорт в CSV</a>
+          <a href="admin-export-orders.html?format=excel">Експорт в Excel</a>
+          <a href="admin-export-orders.html?format=pdf">Експорт в PDF</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+      <p>Адміністративна панель</p>
+    </footer>
+  </body>
+</html>

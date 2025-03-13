@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вхід - Lib&Art Project</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lib&Art Project</h1>
+      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="collections.html">Книжкові колекції</a></li>
+          <li>
+            <a href="cart.html"
+              ><img
+                src="../assets/logos/shopping-cart-icon-btn.svg"
+                alt="Кошик"
+              />
+              Кошик</a
+            >
+          </li>
+          <li>
+            <a href="login.html"
+              ><img src="../assets/logos/login-icon-btn.svg" alt="Вхід" />
+              Вхід</a
+            >
+          </li>
+          <li><a href="register.html">Реєстрація</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Вхід до особистого кабінету</h2>
+        <form action="login-process.html" method="post">
+          <div>
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div>
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Запам'ятати мене</label>
+          </div>
+          <button type="submit">Увійти</button>
+        </form>
+        <p>Забули пароль? <a href="reset-password.html">Відновити</a></p>
+        <p>
+          Немає облікового запису? <a href="register.html">Зареєструватися</a>
+        </p>
+        <a href="admin-panel.html">
+          <button>Отримати доступ до адмін панелі</button>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+      <p>Контакти: info@libartproject.ua | +380 44 123 4567</p>
+    </footer>
+  </body>
+</html>

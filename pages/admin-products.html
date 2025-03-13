@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Управління товарами - Lib&Art Project</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lib&Art Project</h1>
+      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
+      <nav>
+        <ul>
+          <li><a href="admin-products.html">Управління товарами</a></li>
+          <li><a href="admin-orders.html">Замовлення</a></li>
+          <li><a href="admin-users.html">Користувачі</a></li>
+          <li><a href="index.html">Перейти на сайт</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Управління товарами</h2>
+
+        <div class="product-actions">
+          <a href="admin-add-product.html">Додати новий товар</a>
+          <a href="admin-import-products.html">Імпортувати товари</a>
+          <a href="admin-export-products.html">Експортувати товари</a>
+        </div>
+
+        <div class="product-search">
+          <form action="admin-products.html" method="get">
+            <input
+              type="text"
+              name="search"
+              placeholder="Пошук товарів за назвою, автором, ISBN..."
+            />
+            <select name="category">
+              <option value="">Всі категорії</option>
+              <option value="art-albums">Альбоми з мистецтва</option>
+              <option value="graphic-novels">Графічні романи</option>
+              <option value="exhibition-catalogs">Каталоги виставок</option>
+              <option value="art-theory">Теорія мистецтва</option>
+            </select>
+            <select name="status">
+              <option value="">Всі статуси</option>
+              <option value="in-stock">В наявності</option>
+              <option value="out-of-stock">Немає в наявності</option>
+              <option value="pre-order">Передзамовлення</option>
+            </select>
+            <button type="submit">Пошук</button>
+          </form>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Зображення</th>
+              <th>Назва</th>
+              <th>Автор</th>
+              <th>Категорія</th>
+              <th>Ціна</th>
+              <th>Запас</th>
+              <th>Статус</th>
+              <th>Дії</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1002</td>
+              <td>
+                <img
+                  src="../assets/images/placeholder-for-books.png"
+                  alt="Сучасне світове мистецтво"
+                  width="50"
+                />
+              </td>
+              <td>Сучасне світове мистецтво</td>
+              <td>Ліна Костенко</td>
+              <td>Теорія мистецтва</td>
+              <td>350 грн</td>
+              <td>0</td>
+              <td>Немає в наявності</td>
+              <td>
+                <a href="admin-edit-product.html?id=1002">Редагувати</a>
+                <a
+                  href="admin-delete-product.html?id=1002"
+                  onclick="return confirm('Ви впевнені, що хочете видалити цей товар?');"
+                  >Видалити</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>1003</td>
+              <td>
+                <img
+                  src="../assets/images/placeholder-for-books.png"
+                  alt="Каталог виставки 'Мистецтво Відродження'"
+                  width="50"
+                />
+              </td>
+              <td>Каталог виставки "Мистецтво Відродження"</td>
+              <td>Олена Білик</td>
+              <td>Каталоги виставок</td>
+              <td>550 грн</td>
+              <td>12</td>
+              <td>В наявності</td>
+              <td>
+                <a href="admin-edit-product.html?id=1003">Редагувати</a>
+                <a
+                  href="admin-delete-product.html?id=1003"
+                  onclick="return confirm('Ви впевнені, що хочете видалити цей товар?');"
+                  >Видалити</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <a href="#">&laquo;</a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+      <p>Адміністративна панель</p>
+    </footer>
+  </body>
+</html>

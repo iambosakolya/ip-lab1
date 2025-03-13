@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Додати новий товар - Lib&Art Project</title>
+  </head>
+  <body>
+    <header>
+      <img src="assets/images/banner.png" alt="Lib&Art Project Banner" />
+      <h1>Додати новий товар - Lib&Art Project</h1>
+      <nav>
+        <ul>
+          <li><a href="admin-products.html">Управління товарами</a></li>
+          <li><a href="admin-orders.html">Замовлення</a></li>
+          <li><a href="admin-users.html">Користувачі</a></li>
+          <li><a href="index.html">Перейти на сайт</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Додати новий товар</h2>
+        <form
+          action="admin-product-save.html"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <fieldset>
+            <legend>Основна інформація</legend>
+            <div>
+              <label for="title">Назва книги:</label>
+              <input type="text" id="title" name="title" required />
+            </div>
+            <div>
+              <label for="author">Автор:</label>
+              <input type="text" id="author" name="author" required />
+            </div>
+            <div>
+              <label for="publisher">Видавництво:</label>
+              <input type="text" id="publisher" name="publisher" required />
+            </div>
+            <div>
+              <label for="year">Рік видання:</label>
+              <input type="number" id="year" name="year" required />
+            </div>
+            <div>
+              <label for="isbn">ISBN:</label>
+              <input type="text" id="isbn" name="isbn" />
+            </div>
+            <div>
+              <label for="pages">Кількість сторінок:</label>
+              <input type="number" id="pages" name="pages" />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Класифікація та формат</legend>
+            <div>
+              <label for="category">Категорія:</label>
+              <select id="category" name="category" required>
+                <option value="">Оберіть категорію</option>
+                <option value="art-albums">Альбоми з мистецтва</option>
+                <option value="graphic-novels">Графічні романи</option>
+                <option value="exhibition-catalogs">Каталоги виставок</option>
+                <option value="art-theory">Теорія мистецтва</option>
+              </select>
+            </div>
+            <div>
+              <label for="format">Формат:</label>
+              <select id="format" name="format" required>
+                <option value="">Оберіть формат</option>
+                <option value="printed">Друкована книга</option>
+                <option value="e-book">Електронна книга</option>
+                <option value="both">Обидва формати</option>
+              </select>
+            </div>
+            <div>
+              <label for="collections">Колекції:</label>
+              <select id="collections" name="collections[]" multiple>
+                <option value="modern-ukrainian">
+                  Сучасна українська література
+                </option>
+                <option value="collectible">Колекційні видання</option>
+                <option value="graphic-novels">
+                  Графічні романи та комікси
+                </option>
+                <option value="avant-garde">Мистецтво авангарду</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Ціни та наявність</legend>
+            <div>
+              <label for="price">Ціна:</label>
+              <input
+                type="number"
+                id="price"
+                name="price"
+                step="0.01"
+                required
+              />
+              <span>грн</span>
+            </div>
+            <div>
+              <label for="discount-price">Ціна зі знижкою (якщо є):</label>
+              <input
+                type="number"
+                id="discount-price"
+                name="discount-price"
+                step="0.01"
+              />
+              <span>грн</span>
+            </div>
+            <div>
+              <label for="stock">Кількість у наявності:</label>
+              <input type="number" id="stock" name="stock" required />
+            </div>
+            <div>
+              <label for="status">Статус:</label>
+              <select id="status" name="status" required>
+                <option value="in-stock">В наявності</option>
+                <option value="out-of-stock">Немає в наявності</option>
+                <option value="pre-order">Передзамовлення</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Опис та зображення</legend>
+            <div>
+              <label for="description">Опис книги:</label>
+              <textarea
+                id="description"
+                name="description"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div>
+              <label for="table-of-contents">Зміст книги:</label>
+              <textarea
+                id="table-of-contents"
+                name="table-of-contents"
+                rows="5"
+              ></textarea>
+            </div>
+            <div>
+              <label for="main-image">Головне зображення:</label>
+              <input
+                type="file"
+                id="main-image"
+                name="main-image"
+                accept="image/*"
+                required
+              />
+            </div>
+            <div>
+              <label for="additional-images">Додаткові зображення:</label>
+              <input
+                type="file"
+                id="additional-images"
+                name="additional-images[]"
+                accept="image/*"
+                multiple
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Метадані для SEO</legend>
+            <div>
+              <label for="meta-title">Meta Title:</label>
+              <input type="text" id="meta-title" name="meta-title" />
+            </div>
+            <div>
+              <label for="meta-description">Meta Description:</label>
+              <textarea
+                id="meta-description"
+                name="meta-description"
+                rows="2"
+              ></textarea>
+            </div>
+            <div>
+              <label for="meta-keywords">Meta Keywords:</label>
+              <input type="text" id="meta-keywords" name="meta-keywords" />
+            </div>
+          </fieldset>
+
+          <div>
+            <button type="submit">Додати товар</button>
+            <button type="reset">Очистити форму</button>
+            <a href="admin-products.html">Скасувати</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+      <p>Адміністративна панель</p>
+    </footer>
+  </body>
+</html>

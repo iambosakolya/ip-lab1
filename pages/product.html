@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Історія українського мистецтва - Lib&Art Project</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lib&Art Project</h1>
+      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="collections.html">Книжкові колекції</a></li>
+          <li>
+            <a href="cart.html"
+              ><img
+                src="../assets/logos/shopping-cart-icon-btn.svg"
+                alt="Кошик"
+              />
+              Кошик</a
+            >
+          </li>
+          <li>
+            <a href="login.html"
+              ><img src="../assets/logos/login-icon-btn.svg" alt="Вхід" />
+              Вхід</a
+            >
+          </li>
+          <li><a href="register.html">Реєстрація</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="product-details">
+        <h2>Історія українського мистецтва</h2>
+
+        <div class="product-info">
+          <div class="product-image">
+            <img
+              src="../assets/images/placeholder-for-books.png"
+              alt="Історія українського мистецтва"
+            />
+          </div>
+
+          <div class="product-description">
+            <p><strong>Автор:</strong> Дмитро Горбачов</p>
+            <p><strong>Видавництво:</strong> Мистецтво України</p>
+            <p><strong>Рік видання:</strong> 2023</p>
+            <p><strong>Кількість сторінок:</strong> 420</p>
+            <p><strong>Формат:</strong> Друкована книга</p>
+            <p><strong>ISBN:</strong> 978-966-1234-56-7</p>
+            <p><strong>Ціна:</strong> 650 грн</p>
+
+            <div class="product-actions">
+              <label for="quantity">Кількість:</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+              />
+              <button>Додати в кошик</button>
+              <button>Купити зараз</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-details-tabs">
+          <div class="tab">
+            <button class="tablinks">Опис</button>
+            <button class="tablinks">Зміст</button>
+            <button class="tablinks">Відгуки</button>
+          </div>
+
+          <div class="tabcontent">
+            <h3>Опис</h3>
+            <p>
+              Повне видання, присвячене історії українського мистецтва від
+              найдавніших часів до сьогодення. Книга містить багатий
+              ілюстративний матеріал, аналіз художніх стилів та напрямків,
+              біографії визначних українських митців та опис їхніх найвідоміших
+              робіт.
+            </p>
+            <p>
+              Видання є результатом багаторічної праці відомого мистецтвознавця
+              Дмитра Горбачова та колективу науковців Інституту
+              мистецтвознавства.
+            </p>
+          </div>
+        </div>
+
+        <div class="related-books">
+          <h3>Схожі видання</h3>
+          <div class="book">
+            <img
+              src="../assets/images/placeholder-for-books.png"
+              alt="Українське мистецтво XX століття"
+            />
+            <h4>Українське мистецтво XX століття</h4>
+            <p>Автор: Олександр Федорук</p>
+            <p>Ціна: 580 грн</p>
+            <a href="product.html">Детальніше</a>
+          </div>
+          <div class="book">
+            <img
+              src="../assets/images/placeholder-for-books.png"
+              alt="Мистецтво Козацької доби"
+            />
+            <h4>Мистецтво Козацької доби</h4>
+            <p>Автор: Платон Білецький</p>
+            <p>Ціна: 490 грн</p>
+            <a href="product.html">Детальніше</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+      <p>Контакти: info@libartproject.ua | +380 44 123 4567</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Управління користувачами - Lib&Art Project</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lib&Art Project</h1>
+      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
+      <nav>
+        <ul>
+          <li><a href="admin-products.html">Управління товарами</a></li>
+          <li><a href="admin-orders.html">Замовлення</a></li>
+          <li><a href="admin-users.html">Користувачі</a></li>
+          <li><a href="index.html">Перейти на сайт</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Управління користувачами</h2>
+
+        <div class="user-actions">
+          <a href="admin-add-user.html">Додати нового користувача</a>
+          <a href="admin-export-users.html">Експортувати список користувачів</a>
+        </div>
+
+        <div class="user-search">
+          <form action="admin-users.html" method="get">
+            <input
+              type="text"
+              name="search"
+              placeholder="Пошук користувачів за ім'ям, email..."
+            />
+            <select name="role">
+              <option value="">Всі ролі</option>
+              <option value="customer">Клієнти</option>
+              <option value="manager">Менеджери</option>
+              <option value="admin">Адміністратори</option>
+            </select>
+            <select name="status">
+              <option value="">Всі статуси</option>
+              <option value="active">Активні</option>
+              <option value="inactive">Неактивні</option>
+              <option value="blocked">Заблоковані</option>
+            </select>
+            <button type="submit">Пошук</button>
+          </form>
+        </div>
+
+        <div class="users-table">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Ім'я</th>
+                <th>Email</th>
+                <th>Телефон</th>
+                <th>Роль</th>
+                <th>Статус</th>
+                <th>Дата реєстрації</th>
+                <th>Останній вхід</th>
+                <th>Замовлень</th>
+                <th>Дії</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1001</td>
+                <td>Олександр Ковальчук</td>
+                <td>oleksandr@example.com</td>
+                <td>+380501234567</td>
+                <td>Клієнт</td>
+                <td>Активний</td>
+                <td>10-01-2024</td>
+                <td>12-03-2025</td>
+                <td>8</td>
+                <td>
+                  <a href="admin-edit-user.html?id=1001">Редагувати</a>
+                  <a href="admin-user-orders.html?id=1001">Замовлення</a>
+                  <a href="admin-block-user.html?id=1001">Блокувати</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1002</td>
+                <td>Марія Шевченко</td>
+                <td>maria@example.com</td>
+                <td>+380672345678</td>
+                <td>Клієнт</td>
+                <td>Активний</td>
+                <td>15-01-2024</td>
+                <td>13-03-2025</td>
+                <td>12</td>
+                <td>
+                  <a href="admin-edit-user.html?id=1002">Редагувати</a>
+                  <a href="admin-user-orders.html?id=1002">Замовлення</a>
+                  <a href="admin-block-user.html?id=1002">Блокувати</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1003</td>
+                <td>Віктор Мельник</td>
+                <td>viktor@example.com</td>
+                <td>+380633456789</td>
+                <td>Менеджер</td>
+                <td>Активний</td>
+                <td>05-11-2023</td>
+                <td>13-03-2025</td>
+                <td>0</td>
+                <td>
+                  <a href="admin-edit-user.html?id=1003">Редагувати</a>
+                  <a href="admin-user-orders.html?id=1003">Замовлення</a>
+                  <a href="admin-block-user.html?id=1003">Блокувати</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1004</td>
+                <td>Ірина Бондаренко</td>
+                <td>iryna@example.com</td>
+                <td>+380994567890</td>
+                <td>Клієнт</td>
+                <td>Заблокований</td>
+                <td>20-02-2024</td>
+                <td>01-03-2025</td>
+                <td>3</td>
+                <td>
+                  <a href="admin-edit-user.html?id=1004">Редагувати</a>
+                  <a href="admin-user-orders.html?id=1004">Замовлення</a>
+                  <a href="admin-unblock-user.html?id=1004">Розблокувати</a>
+                </td>
+              </tr>
+              <tr>
+                <td>1005</td>
+                <td>Андрій Петренко</td>
+                <td>andriy@example.com</td>
+                <td>+380665678901</td>
+                <td>Адміністратор</td>
+                <td>Активний</td>
+                <td>01-10-2023</td>
+                <td>13-03-2025</td>
+                <td>0</td>
+                <td>
+                  <a href="admin-edit-user.html?id=1005">Редагувати</a>
+                  <a href="admin-user-orders.html?id=1005">Замовлення</a>
+                  <a href="admin-block-user.html?id=1005">Блокувати</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <span>Сторінка 1 з 25</span>
+          <a href="#" class="current-page">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <span>...</span>
+          <a href="#">25</a>
+          <a href="#">Наступна →</a>
+        </div>
+
+        <div class="bulk-actions">
+          <h3>Масові дії</h3>
+          <form action="admin-bulk-user-actions.html" method="post">
+            <select name="bulk-action">
+              <option value="">Оберіть дію</option>
+              <option value="activate">Активувати вибраних</option>
+              <option value="block">Заблокувати вибраних</option>
+              <option value="delete">Видалити вибраних</option>
+              <option value="export">Експортувати вибраних</option>
+              <option value="role-change">Змінити роль вибраних</option>
+            </select>
+            <button type="submit">Застосувати</button>
+          </form>
+        </div>
+      </section>
+
+      <section>
+        <h2>Статистика користувачів</h2>
+        <div class="user-stats">
+          <div class="stat-box">
+            <h3>Загальна інформація</h3>
+            <ul>
+              <li>Всього користувачів: 1,245</li>
+              <li>Активних користувачів: 1,156</li>
+              <li>Заблокованих користувачів: 89</li>
+              <li>Нових користувачів за останній місяць: 87</li>
+            </ul>
+          </div>
+          <div class="stat-box">
+            <h3>Розподіл за ролями</h3>
+            <ul>
+              <li>Клієнти: 1,230</li>
+              <li>Менеджери: 12</li>
+              <li>Адміністратори: 3</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+      <p>Адміністративна панель</p>
+    </footer>
+  </body>
+</html>

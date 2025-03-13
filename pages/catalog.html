@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог - Lib&Art Project</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lib&Art Project</h1>
+      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="collections.html">Книжкові колекції</a></li>
+          <li>
+            <a href="cart.html"
+              ><img
+                src="../assets/logos/shopping-cart-icon-btn.svg"
+                alt="Кошик"
+              />
+              Кошик</a
+            >
+          </li>
+          <li>
+            <a href="login.html"
+              ><img src="../assets/logos/login-icon-btn.svg" alt="Вхід" />
+              Вхід</a
+            >
+          </li>
+          <li><a href="register.html">Реєстрація</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Каталог мистецької літератури</h2>
+        <div class="filters">
+          <h3>Фільтри</h3>
+          <form action="catalog.html" method="get">
+            <div>
+              <label for="category">Категорія:</label>
+              <select id="category" name="category">
+                <option value="">Всі категорії</option>
+                <option value="art-albums">Альбоми з мистецтва</option>
+                <option value="graphic-novels">Графічні романи</option>
+                <option value="exhibition-catalogs">Каталоги виставок</option>
+                <option value="art-theory">Теорія мистецтва</option>
+              </select>
+            </div>
+            <div>
+              <label for="format">Формат:</label>
+              <select id="format" name="format">
+                <option value="">Всі формати</option>
+                <option value="printed">Друковані книги</option>
+                <option value="e-book">Електронні книги</option>
+              </select>
+            </div>
+            <div>
+              <label for="price-min">Ціна від:</label>
+              <input type="number" id="price-min" name="price-min" min="0" />
+              <label for="price-max">до:</label>
+              <input type="number" id="price-max" name="price-max" />
+            </div>
+            <button type="submit">Застосувати фільтри</button>
+          </form>
+        </div>
+
+        <div class="search">
+          <h3>Пошук літератури</h3>
+          <form action="search-results.html" method="get">
+            <input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Введіть назву книги, автора або ключові слова"
+            />
+            <button type="submit">Шукати</button>
+          </form>
+        </div>
+
+        <div class="book-list">
+          <div class="book">
+            <img
+              src="../assets/images/placeholder-for-books.png"
+              alt="Історія українського мистецтва"
+            />
+            <h3>Історія українського мистецтва</h3>
+            <p>Автор: Дмитро Горбачов</p>
+            <p>Формат: Друкована книга</p>
+            <p>Ціна: 650 грн</p>
+            <a href="product.html">Детальніше</a>
+            <button>Додати в кошик</button>
+          </div>
+
+          <div class="book">
+            <img
+              src="../assets/images/placeholder-for-books.png"
+              alt="Сучасне світове мистецтво"
+            />
+            <h3>Сучасне світове мистецтво</h3>
+            <p>Автор: Ліна Костенко</p>
+            <p>Формат: Електронна книга</p>
+            <p>Ціна: 350 грн</p>
+            <a href="product.html">Детальніше</a>
+            <button>Додати в кошик</button>
+          </div>
+
+          <div class="book">
+            <img
+              src="../assets/images/placeholder-for-books.png"
+              alt="Каталог виставки 'Мистецтво Відродження'"
+            />
+            <h3>Каталог виставки "Мистецтво Відродження"</h3>
+            <p>Куратор: Олена Білик</p>
+            <p>Формат: Друкована книга</p>
+            <p>Ціна: 550 грн</p>
+            <a href="product.html">Детальніше</a>
+            <button>Додати в кошик</button>
+          </div>
+
+          <div class="book">
+            <img
+              src="../assets/images/placeholder-for-books.png"
+              alt="Артбук 'Сучасна ілюстрація'"
+            />
+            <h3>Артбук "Сучасна ілюстрація"</h3>
+            <p>Упорядник: Марія Діброва</p>
+            <p>Формат: Друкована книга</p>
+            <p>Ціна: 920 грн</p>
+            <a href="product.html">Детальніше</a>
+            <button>Додати в кошик</button>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <a href="#">&laquo;</a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+      <p>Контакти: info@libartproject.ua | +380 44 123 4567</p>
+    </footer>
+  </body>
+</html>
