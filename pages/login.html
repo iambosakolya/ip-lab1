@@ -4,67 +4,178 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Вхід - Lib&Art Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
-      <h1>Lib&Art Project</h1>
-      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
-      <nav>
-        <ul>
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="collections.html">Книжкові колекції</a></li>
-          <li>
-            <a href="cart.html"
-              ><img
-                src="../assets/logos/shopping-cart-icon-btn.svg"
-                alt="Кошик"
-              />
-              Кошик</a
-            >
-          </li>
-          <li>
-            <a href="login.html"
-              ><img src="../assets/logos/login-icon-btn.svg" alt="Вхід" />
-              Вхід</a
-            >
-          </li>
-          <li><a href="register.html">Реєстрація</a></li>
-        </ul>
-      </nav>
+  <body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between"
+      >
+        <div class="flex items-center mb-4 md:mb-0">
+          <h1 class="text-2xl font-bold text-gray-700 mr-2">Lib&Art Project</h1>
+          <img
+            src="../assets/logos/book-icon-header.svg"
+            alt="logo of the shop"
+            class="h-8 w-8"
+          />
+        </div>
+        <nav>
+          <ul class="flex flex-wrap items-center space-x-1 md:space-x-4">
+            <li>
+              <a
+                href="index.html"
+                class="px-3 py-2 text-gray-700 hover:text-indigo-700"
+                >Головна</a
+              >
+            </li>
+            <li>
+              <a
+                href="catalog.html"
+                class="px-3 py-2 text-gray-700 hover:text-indigo-700"
+                >Каталог</a
+              >
+            </li>
+            <li>
+              <a
+                href="collections.html"
+                class="px-3 py-2 text-gray-700 hover:text-indigo-700"
+                >Книжкові колекції</a
+              >
+            </li>
+            <li>
+              <a
+                href="cart.html"
+                class="px-3 py-2 flex items-center text-gray-700 hover:text-indigo-700"
+              >
+                <img
+                  src="../assets/logos/shopping-cart-icon-btn.svg"
+                  alt="Кошик"
+                  class="h-5 w-5 mr-1"
+                />
+                Кошик
+              </a>
+            </li>
+            <li>
+              <a
+                href="login.html"
+                class="px-3 py-2 flex items-center text-gray-700"
+              >
+                <img
+                  src="../assets/logos/login-icon-btn.svg"
+                  alt="Вхід"
+                  class="h-5 w-5 mr-1"
+                />
+                Вхід
+              </a>
+            </li>
+            <li>
+              <a
+                href="register.html"
+                class="px-3 py-2 text-gray-700 hover:text-indigo-700"
+                >Реєстрація</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section>
-        <h2>Вхід до особистого кабінету</h2>
-        <form action="login-process.html" method="post">
+    <main class="container mx-auto px-4 py-8 flex-grow">
+      <section class="max-w-md mx-auto bg-white rounded-lg shadow-md p-8 my-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+          Вхід до особистого кабінету
+        </h2>
+        <form action="login-process.html" method="post" class="space-y-6">
           <div>
-            <label for="email">Електронна пошта:</label>
-            <input type="email" id="email" name="email" required />
+            <label
+              for="email"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Електронна пошта:</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            />
           </div>
           <div>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required />
+            <label
+              for="password"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Пароль:</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            />
           </div>
-          <div>
-            <input type="checkbox" id="remember" name="remember" />
-            <label for="remember">Запам'ятати мене</label>
+          <div class="flex items-center">
+            <input
+              type="checkbox"
+              id="remember"
+              name="remember"
+              class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+            />
+            <label for="remember" class="ml-2 block text-sm text-gray-700"
+              >Запам'ятати мене</label
+            >
           </div>
-          <button type="submit">Увійти</button>
+          <button
+            type="submit"
+            class="w-full bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors"
+          >
+            Увійти
+          </button>
         </form>
-        <p>Забули пароль? <a href="reset-password.html">Відновити</a></p>
-        <p>
-          Немає облікового запису? <a href="register.html">Зареєструватися</a>
-        </p>
-        <a href="admin-panel.html">
-          <button>Отримати доступ до адмін панелі</button>
-        </a>
+
+        <div class="mt-6 space-y-4">
+          <p class="text-center text-sm text-gray-600">
+            Забули пароль?
+            <a
+              href="reset-password.html"
+              class="text-indigo-600 hover:text-indigo-800 font-medium"
+              >Відновити</a
+            >
+          </p>
+          <p class="text-center text-sm text-gray-600">
+            Немає облікового запису?
+            <a
+              href="register.html"
+              class="text-indigo-600 hover:text-gray-800 font-medium"
+              >Зареєструватися</a
+            >
+          </p>
+          <div class="pt-4 border-t border-gray-200">
+            <a href="admin-panel.html" class="block">
+              <button
+                class="w-full bg-gray-100 text-gray-800 py-2 px-4 rounded-md border border-gray-300 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
+              >
+                Отримати доступ до адмін панелі
+              </button>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
-      <p>Контакти: info@libartproject.ua | +380 44 123 4567</p>
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
+      <div class="container mx-auto px-4 text-center">
+        <p class="mb-2">&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+        <p>
+          Контакти:
+          <a
+            href="mailto:info@libartproject.ua"
+            class="text-indigo-300 hover:text-indigo-200"
+            >info@libartproject.ua</a
+          >
+          | +380 44 123 4567
+        </p>
+      </div>
     </footer>
   </body>
 </html>

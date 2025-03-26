@@ -4,134 +4,486 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Управління товарами - Lib&Art Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
-      <h1>Lib&Art Project</h1>
-      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
-      <nav>
-        <ul>
-          <li><a href="admin-products.html">Управління товарами</a></li>
-          <li><a href="admin-orders.html">Замовлення</a></li>
-          <li><a href="admin-users.html">Користувачі</a></li>
-          <li><a href="index.html">Перейти на сайт</a></li>
-        </ul>
-      </nav>
+  <body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+    <header class="bg-gray-800 text-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between"
+      >
+        <div class="flex items-center mb-4 md:mb-0">
+          <h1 class="text-2xl font-bold text-white mr-2">Lib&Art Project</h1>
+          <img
+            src="../assets/logos/book-icon-header.svg"
+            alt="logo of the shop"
+            class="h-8 w-8"
+          />
+        </div>
+        <nav>
+          <ul class="flex flex-wrap items-center space-x-1 md:space-x-4">
+            <li>
+              <a
+                href="admin-products.html"
+                class="px-3 py-2 text-white font-medium"
+                >Управління товарами</a
+              >
+            </li>
+            <li>
+              <a
+                href="admin-orders.html"
+                class="px-3 py-2 text-gray-300 hover:text-white"
+                >Замовлення</a
+              >
+            </li>
+            <li>
+              <a
+                href="admin-users.html"
+                class="px-3 py-2 text-gray-300 hover:text-white"
+                >Користувачі</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="px-3 py-2 text-gray-300 hover:text-white"
+                >Перейти на сайт</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
+    <main class="container mx-auto px-4 py-8 flex-grow">
       <section>
-        <h2>Управління товарами</h2>
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+          Управління товарами
+        </h2>
 
-        <div class="product-actions">
-          <a href="admin-add-product.html">Додати новий товар</a>
-          <a href="admin-import-products.html">Імпортувати товари</a>
-          <a href="admin-export-products.html">Експортувати товари</a>
+        <div class="product-actions flex flex-col sm:flex-row gap-4 mb-6">
+          <a
+            href="admin-add-product.html"
+            class="bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors inline-flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Додати новий товар
+          </a>
+          <a
+            href="admin-import-products.html"
+            class="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors inline-flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Імпортувати товари
+          </a>
+          <a
+            href="admin-export-products.html"
+            class="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors inline-flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Експортувати товари
+          </a>
         </div>
 
-        <div class="product-search">
-          <form action="admin-products.html" method="get">
-            <input
-              type="text"
-              name="search"
-              placeholder="Пошук товарів за назвою, автором, ISBN..."
-            />
-            <select name="category">
-              <option value="">Всі категорії</option>
-              <option value="art-albums">Альбоми з мистецтва</option>
-              <option value="graphic-novels">Графічні романи</option>
-              <option value="exhibition-catalogs">Каталоги виставок</option>
-              <option value="art-theory">Теорія мистецтва</option>
-            </select>
-            <select name="status">
-              <option value="">Всі статуси</option>
-              <option value="in-stock">В наявності</option>
-              <option value="out-of-stock">Немає в наявності</option>
-              <option value="pre-order">Передзамовлення</option>
-            </select>
-            <button type="submit">Пошук</button>
+        <div class="product-search bg-white p-4 rounded-lg shadow-md mb-6">
+          <form
+            action="admin-products.html"
+            method="get"
+            class="flex flex-col md:flex-row gap-4"
+          >
+            <div class="flex-grow">
+              <input
+                type="text"
+                name="search"
+                placeholder="Пошук товарів за назвою, автором, ISBN..."
+                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+              />
+            </div>
+            <div class="w-full md:w-48">
+              <select
+                name="category"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+              >
+                <option value="">Всі категорії</option>
+                <option value="art-albums">Альбоми з мистецтва</option>
+                <option value="graphic-novels">Графічні романи</option>
+                <option value="exhibition-catalogs">Каталоги виставок</option>
+                <option value="art-theory">Теорія мистецтва</option>
+              </select>
+            </div>
+            <div class="w-full md:w-48">
+              <select
+                name="status"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+              >
+                <option value="">Всі статуси</option>
+                <option value="in-stock">В наявності</option>
+                <option value="out-of-stock">Немає в наявності</option>
+                <option value="pre-order">Передзамовлення</option>
+              </select>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="w-full md:w-auto bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition-colors"
+              >
+                Пошук
+              </button>
+            </div>
           </form>
         </div>
 
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Зображення</th>
-              <th>Назва</th>
-              <th>Автор</th>
-              <th>Категорія</th>
-              <th>Ціна</th>
-              <th>Запас</th>
-              <th>Статус</th>
-              <th>Дії</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1002</td>
-              <td>
-                <img
-                  src="../assets/images/placeholder-for-books.png"
-                  alt="Сучасне світове мистецтво"
-                  width="50"
-                />
-              </td>
-              <td>Сучасне світове мистецтво</td>
-              <td>Ліна Костенко</td>
-              <td>Теорія мистецтва</td>
-              <td>350 грн</td>
-              <td>0</td>
-              <td>Немає в наявності</td>
-              <td>
-                <a href="admin-edit-product.html?id=1002">Редагувати</a>
-                <a
-                  href="admin-delete-product.html?id=1002"
-                  onclick="return confirm('Ви впевнені, що хочете видалити цей товар?');"
-                  >Видалити</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>1003</td>
-              <td>
-                <img
-                  src="../assets/images/placeholder-for-books.png"
-                  alt="Каталог виставки 'Мистецтво Відродження'"
-                  width="50"
-                />
-              </td>
-              <td>Каталог виставки "Мистецтво Відродження"</td>
-              <td>Олена Білик</td>
-              <td>Каталоги виставок</td>
-              <td>550 грн</td>
-              <td>12</td>
-              <td>В наявності</td>
-              <td>
-                <a href="admin-edit-product.html?id=1003">Редагувати</a>
-                <a
-                  href="admin-delete-product.html?id=1003"
-                  onclick="return confirm('Ви впевнені, що хочете видалити цей товар?');"
-                  >Видалити</a
-                >
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    ID
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Зображення
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Назва
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Автор
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Категорія
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Ціна
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Запас
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Статус
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Дії
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    1001
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <img
+                      src="../assets/images/placeholder-for-books.png"
+                      alt="Історія українського мистецтва"
+                      class="h-12 w-10 object-cover rounded"
+                    />
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                  >
+                    Історія українського мистецтва
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Дмитро Горбачов
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Альбоми з мистецтва
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    650 грн
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    15
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                    >
+                      В наявності
+                    </span>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <div class="flex space-x-2">
+                      <a
+                        href="admin-edit-product.html?id=1001"
+                        class="text-gray-600 hover:text-gray-900"
+                        >Редагувати</a
+                      >
+                      <a
+                        href="admin-delete-product.html?id=1001"
+                        onclick="return confirm('Ви впевнені, що хочете видалити цей товар?');"
+                        class="text-red-600 hover:text-red-900"
+                        >Видалити</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    1002
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <img
+                      src="../assets/images/placeholder-for-books.png"
+                      alt="Сучасне світове мистецтво"
+                      class="h-12 w-10 object-cover rounded"
+                    />
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                  >
+                    Сучасне світове мистецтво
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Ліна Костенко
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Теорія мистецтва
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    350 грн
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    0
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800"
+                    >
+                      Немає в наявності
+                    </span>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <div class="flex space-x-2">
+                      <a
+                        href="admin-edit-product.html?id=1002"
+                        class="text-gray-600 hover:text-gray-900"
+                        >Редагувати</a
+                      >
+                      <a
+                        href="admin-delete-product.html?id=1002"
+                        onclick="return confirm('Ви впевнені, що хочете видалити цей товар?');"
+                        class="text-red-600 hover:text-red-900"
+                        >Видалити</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    1003
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <img
+                      src="../assets/images/placeholder-for-books.png"
+                      alt="Каталог виставки 'Мистецтво Відродження'"
+                      class="h-12 w-10 object-cover rounded"
+                    />
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                  >
+                    Каталог виставки "Мистецтво Відродження"
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Олена Білик
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Каталоги виставок
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    550 грн
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    12
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                    >
+                      В наявності
+                    </span>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <div class="flex space-x-2">
+                      <a
+                        href="admin-edit-product.html?id=1003"
+                        class="text-gray-600 hover:text-gray-900"
+                        >Редагувати</a
+                      >
+                      <a
+                        href="admin-delete-product.html?id=1003"
+                        onclick="return confirm('Ви впевнені, що хочете видалити цей товар?');"
+                        class="text-red-600 hover:text-red-900"
+                        >Видалити</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    1004
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <img
+                      src="../assets/images/placeholder-for-books.png"
+                      alt="Артбук 'Сучасна ілюстрація'"
+                      class="h-12 w-10 object-cover rounded"
+                    />
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                  >
+                    Артбук "Сучасна ілюстрація"
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Марія Діброва
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    Графічні романи
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    920 грн
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    3
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
+                    >
+                      Закінчується
+                    </span>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <div class="flex space-x-2">
+                      <a
+                        href="admin-edit-product.html?id=1004"
+                        class="text-gray-600 hover:text-gray-900"
+                        >Редагувати</a
+                      >
+                      <a
+                        href="admin-delete-product.html?id=1004"
+                        onclick="return confirm('Ви впевнені, що хочете видалити цей товар?');"
+                        class="text-red-600 hover:text-red-900"
+                        >Видалити</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-        <div class="pagination">
-          <a href="#">&laquo;</a>
-          <a href="#" class="active">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">&raquo;</a>
+        <div class="pagination flex justify-center">
+          <nav
+            class="inline-flex rounded-md shadow-sm -space-x-px"
+            aria-label="Pagination"
+          >
+            <a
+              href="#"
+              class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+            >
+              <span class="sr-only">Previous</span>
+              &laquo;
+            </a>
+            <a
+              href="#"
+              aria-current="page"
+              class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-gray-700 text-sm font-medium text-white"
+            >
+              1
+            </a>
+            <a
+              href="#"
+              class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
+              2
+            </a>
+            <a
+              href="#"
+              class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
+              3
+            </a>
+            <a
+              href="#"
+              class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+            >
+              <span class="sr-only">Next</span>
+              &raquo;
+            </a>
+          </nav>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
-      <p>Адміністративна панель</p>
+    <footer class="bg-gray-800 text-white py-6 mt-auto">
+      <div class="container mx-auto px-4 text-center">
+        <p class="mb-2">&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+        <p class="text-gray-400">Адміністративна панель</p>
+      </div>
     </footer>
   </body>
 </html>

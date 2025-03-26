@@ -4,125 +4,295 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Історія українського мистецтва - Lib&Art Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
-      <h1>Lib&Art Project</h1>
-      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
-      <nav>
-        <ul>
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="collections.html">Книжкові колекції</a></li>
-          <li>
-            <a href="cart.html"
-              ><img
-                src="../assets/logos/shopping-cart-icon-btn.svg"
-                alt="Кошик"
-              />
-              Кошик</a
-            >
-          </li>
-          <li>
-            <a href="login.html"
-              ><img src="../assets/logos/login-icon-btn.svg" alt="Вхід" />
-              Вхід</a
-            >
-          </li>
-          <li><a href="register.html">Реєстрація</a></li>
-        </ul>
-      </nav>
+  <body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between"
+      >
+        <div class="flex items-center mb-4 md:mb-0">
+          <h1 class="text-2xl font-bold text-gray-700 mr-2">Lib&Art Project</h1>
+          <img
+            src="../assets/logos/book-icon-header.svg"
+            alt="logo of the shop"
+            class="h-8 w-8"
+          />
+        </div>
+        <nav>
+          <ul class="flex flex-wrap items-center space-x-1 md:space-x-4">
+            <li>
+              <a
+                href="index.html"
+                class="px-3 py-2 text-gray-600 hover:text-gray-900"
+                >Головна</a
+              >
+            </li>
+            <li>
+              <a
+                href="catalog.html"
+                class="px-3 py-2 text-gray-600 hover:text-gray-900"
+                >Каталог</a
+              >
+            </li>
+            <li>
+              <a
+                href="collections.html"
+                class="px-3 py-2 text-gray-600 hover:text-gray-900"
+                >Книжкові колекції</a
+              >
+            </li>
+            <li>
+              <a
+                href="cart.html"
+                class="px-3 py-2 flex items-center text-gray-600 hover:text-gray-900"
+              >
+                <img
+                  src="../assets/logos/shopping-cart-icon-btn.svg"
+                  alt="Кошик"
+                  class="h-5 w-5 mr-1"
+                />
+                Кошик
+              </a>
+            </li>
+            <li>
+              <a
+                href="login.html"
+                class="px-3 py-2 flex items-center text-gray-600 hover:text-gray-900"
+              >
+                <img
+                  src="../assets/logos/login-icon-btn.svg"
+                  alt="Вхід"
+                  class="h-5 w-5 mr-1"
+                />
+                Вхід
+              </a>
+            </li>
+            <li>
+              <a
+                href="register.html"
+                class="px-3 py-2 text-gray-600 hover:text-gray-900"
+                >Реєстрація</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section class="product-details">
-        <h2>Історія українського мистецтва</h2>
+    <main class="container mx-auto px-4 py-8 flex-grow">
+      <section class="product-details bg-white rounded-lg shadow-md p-6 mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">
+          Історія українського мистецтва
+        </h2>
 
-        <div class="product-info">
+        <div class="product-info grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div class="product-image">
             <img
               src="../assets/images/placeholder-for-books.png"
               alt="Історія українського мистецтва"
+              class="w-full h-auto rounded-lg shadow-md"
             />
           </div>
 
           <div class="product-description">
-            <p><strong>Автор:</strong> Дмитро Горбачов</p>
-            <p><strong>Видавництво:</strong> Мистецтво України</p>
-            <p><strong>Рік видання:</strong> 2023</p>
-            <p><strong>Кількість сторінок:</strong> 420</p>
-            <p><strong>Формат:</strong> Друкована книга</p>
-            <p><strong>ISBN:</strong> 978-966-1234-56-7</p>
-            <p><strong>Ціна:</strong> 650 грн</p>
+            <div class="space-y-3 mb-6">
+              <p class="text-gray-700">
+                <strong class="font-medium">Автор:</strong> Дженні Хан
+              </p>
+              <p class="text-gray-700">
+                <strong class="font-medium">Видавництво:</strong> Мистецтво
+                України
+              </p>
+              <p class="text-gray-700">
+                <strong class="font-medium">Рік видання:</strong> 2023
+              </p>
+              <p class="text-gray-700">
+                <strong class="font-medium">Кількість сторінок:</strong> 420
+              </p>
+              <p class="text-gray-700">
+                <strong class="font-medium">Формат:</strong> Друкована книга
+              </p>
+              <p class="text-gray-700">
+                <strong class="font-medium">ISBN:</strong> 978-966-1234-56-7
+              </p>
+              <p class="text-xl font-bold text-gray-800 mt-4">
+                <strong>Ціна:</strong> 650 грн
+              </p>
+            </div>
 
-            <div class="product-actions">
-              <label for="quantity">Кількість:</label>
-              <input
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="1"
-                value="1"
-              />
-              <button>Додати в кошик</button>
-              <button>Купити зараз</button>
+            <div
+              class="product-actions space-y-4 border-t border-gray-200 pt-4"
+            >
+              <div class="flex items-center">
+                <label
+                  for="quantity"
+                  class="block text-sm font-medium text-gray-700 mr-3"
+                  >Кількість:</label
+                >
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  min="1"
+                  value="1"
+                  class="w-20 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                />
+              </div>
+              <div
+                class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3"
+              >
+                <button
+                  class="bg-gray-700 text-white py-2 px-4 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors flex-1"
+                >
+                  Додати в кошик
+                </button>
+                <button
+                  class="bg-gray-900 text-white py-2 px-4 rounded-md hover:bg-black focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors flex-1"
+                >
+                  Купити зараз
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="product-details-tabs">
-          <div class="tab">
-            <button class="tablinks">Опис</button>
-            <button class="tablinks">Зміст</button>
-            <button class="tablinks">Відгуки</button>
+        <div class="product-details-tabs mb-8">
+          <div class="tab border-b border-gray-200">
+            <div class="flex flex-wrap -mb-px">
+              <button
+                class="tablinks inline-block p-4 text-gray-700 font-medium border-b-2 border-gray-700"
+              >
+                Опис
+              </button>
+              <button
+                class="tablinks inline-block p-4 text-gray-500 hover:text-gray-700 border-b-2 border-transparent hover:border-gray-300"
+              >
+                Зміст
+              </button>
+              <button
+                class="tablinks inline-block p-4 text-gray-500 hover:text-gray-700 border-b-2 border-transparent hover:border-gray-300"
+              >
+                Відгуки
+              </button>
+            </div>
           </div>
 
-          <div class="tabcontent">
-            <h3>Опис</h3>
-            <p>
-              Повне видання, присвячене історії українського мистецтва від
-              найдавніших часів до сьогодення. Книга містить багатий
-              ілюстративний матеріал, аналіз художніх стилів та напрямків,
-              біографії визначних українських митців та опис їхніх найвідоміших
-              робіт.
-            </p>
-            <p>
-              Видання є результатом багаторічної праці відомого мистецтвознавця
-              Дмитра Горбачова та колективу науковців Інституту
-              мистецтвознавства.
-            </p>
+          <div class="tabcontent py-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Опис</h3>
+            <div class="text-gray-700 space-y-4">
+              <p>
+                Повне видання, присвячене історії українського мистецтва від
+                найдавніших часів до сьогодення. Книга містить багатий
+                ілюстративний матеріал, аналіз художніх стилів та напрямків,
+                біографії визначних українських митців та опис їхніх
+                найвідоміших робіт.
+              </p>
+              <p>
+                Видання є результатом багаторічної праці відомого
+                мистецтвознавця Дмитра Горбачова та колективу науковців
+                Інституту мистецтвознавства.
+              </p>
+            </div>
           </div>
         </div>
 
         <div class="related-books">
-          <h3>Схожі видання</h3>
-          <div class="book">
-            <img
-              src="../assets/images/placeholder-for-books.png"
-              alt="Українське мистецтво XX століття"
-            />
-            <h4>Українське мистецтво XX століття</h4>
-            <p>Автор: Олександр Федорук</p>
-            <p>Ціна: 580 грн</p>
-            <a href="product.html">Детальніше</a>
-          </div>
-          <div class="book">
-            <img
-              src="../assets/images/placeholder-for-books.png"
-              alt="Мистецтво Козацької доби"
-            />
-            <h4>Мистецтво Козацької доби</h4>
-            <p>Автор: Платон Білецький</p>
-            <p>Ціна: 490 грн</p>
-            <a href="product.html">Детальніше</a>
+          <h3 class="text-xl font-semibold text-gray-800 mb-6">
+            Схожі видання
+          </h3>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          >
+            <div
+              class="book bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden transition-transform duration-300 hover:shadow-md hover:-translate-y-1"
+            >
+              <img
+                src="../assets/images/placeholder-for-books.png"
+                alt="Українське мистецтво XX століття"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">
+                  Українське мистецтво XX століття
+                </h4>
+                <p class="text-gray-600 mb-1">Автор: Олександр Федорук</p>
+                <p class="text-gray-700 font-bold mb-3">Ціна: 580 грн</p>
+                <a
+                  href="product.html"
+                  class="inline-block text-gray-700 hover:text-gray-900 font-medium"
+                  >Детальніше</a
+                >
+              </div>
+            </div>
+            <div
+              class="book bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden transition-transform duration-300 hover:shadow-md hover:-translate-y-1"
+            >
+              <img
+                src="../assets/images/placeholder-for-books.png"
+                alt="Мистецтво Козацької доби"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-4">
+                <h4 class="text-lg font-medium text-gray-800 mb-2">
+                  Мистецтво Козацької доби
+                </h4>
+                <p class="text-gray-600 mb-1">Автор: Платон Білецький</p>
+                <p class="text-gray-700 font-bold mb-3">Ціна: 490 грн</p>
+                <a
+                  href="product.html"
+                  class="inline-block text-gray-700 hover:text-gray-900 font-medium"
+                  >Детальніше</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
-      <p>Контакти: info@libartproject.ua | +380 44 123 4567</p>
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
+      <div class="container mx-auto px-4 text-center">
+        <p class="mb-2">&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+        <p>
+          Контакти:
+          <a
+            href="mailto:info@libartproject.ua"
+            class="text-gray-300 hover:text-gray-100"
+            >info@libartproject.ua</a
+          >
+          | +380 44 123 4567
+        </p>
+      </div>
     </footer>
+
+    <script>
+      // Simple tab functionality
+      document.addEventListener('DOMContentLoaded', function () {
+        const tabButtons = document.querySelectorAll('.tablinks');
+
+        tabButtons.forEach((button) => {
+          button.addEventListener('click', function () {
+            // Reset all tabs
+            tabButtons.forEach((btn) => {
+              btn.classList.remove(
+                'text-gray-700',
+                'font-medium',
+                'border-gray-700'
+              );
+              btn.classList.add('text-gray-500', 'border-transparent');
+            });
+
+            // Activate clicked tab
+            this.classList.remove('text-gray-500', 'border-transparent');
+            this.classList.add(
+              'text-gray-700',
+              'font-medium',
+              'border-gray-700'
+            );
+          });
+        });
+      });
+    </script>
   </body>
 </html>

@@ -4,77 +4,232 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Реєстрація - Lib&Art Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
-      <h1>Lib&Art Project</h1>
-      <img src="../assets/logos/book-icon-header.svg" alt="logo of the shop" />
-      <nav>
-        <ul>
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="collections.html">Книжкові колекції</a></li>
-          <li>
-            <a href="cart.html"
-              ><img src="../assets/logos/shopping-cart-icon-btn.svg" alt="Кошик" />
-              Кошик</a
-            >
-          </li>
-          <li>
-            <a href="login.html"
-              ><img src="../assets/logos/login-icon-btn.svg" alt="Вхід" /> Вхід</a
-            >
-          </li>
-          <li><a href="register.html">Реєстрація</a></li>
-        </ul>
-      </nav>
+  <body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between"
+      >
+        <div class="flex items-center mb-4 md:mb-0">
+          <h1 class="text-2xl font-bold text-gray-700 mr-2">Lib&Art Project</h1>
+          <img
+            src="../assets/logos/book-icon-header.svg"
+            alt="logo of the shop"
+            class="h-8 w-8"
+          />
+        </div>
+        <nav>
+          <ul class="flex flex-wrap items-center space-x-1 md:space-x-4">
+            <li>
+              <a
+                href="index.html"
+                class="px-3 py-2 text-gray-600 hover:text-gray-900"
+                >Головна</a
+              >
+            </li>
+            <li>
+              <a
+                href="catalog.html"
+                class="px-3 py-2 text-gray-600 hover:text-gray-900"
+                >Каталог</a
+              >
+            </li>
+            <li>
+              <a
+                href="collections.html"
+                class="px-3 py-2 text-gray-600 hover:text-gray-900"
+                >Книжкові колекції</a
+              >
+            </li>
+            <li>
+              <a
+                href="cart.html"
+                class="px-3 py-2 flex items-center text-gray-600 hover:text-gray-900"
+              >
+                <img
+                  src="../assets/logos/shopping-cart-icon-btn.svg"
+                  alt="Кошик"
+                  class="h-5 w-5 mr-1"
+                />
+                Кошик
+              </a>
+            </li>
+            <li>
+              <a
+                href="login.html"
+                class="px-3 py-2 flex items-center text-gray-600 hover:text-gray-900"
+              >
+                <img
+                  src="../assets/logos/login-icon-btn.svg"
+                  alt="Вхід"
+                  class="h-5 w-5 mr-1"
+                />
+                Вхід
+              </a>
+            </li>
+            <li>
+              <a
+                href="register.html"
+                class="px-3 py-2 text-gray-700 font-medium"
+                >Реєстрація</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section>
-        <h2>Реєстрація нового користувача</h2>
-        <form action="register-process.html" method="post">
-          <div>
-            <label for="name">Повне ім'я:</label>
-            <input type="text" id="name" name="name" required />
+    <main class="container mx-auto px-4 py-8 flex-grow">
+      <section class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8 my-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+          Реєстрація нового користувача
+        </h2>
+        <form action="register-process.html" method="post" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Повне ім'я:</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Електронна пошта:</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+              />
+            </div>
+            <div>
+              <label
+                for="password"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Пароль:</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+              />
+            </div>
+            <div>
+              <label
+                for="confirm-password"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Підтвердження пароля:</label
+              >
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                required
+                class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+              />
+            </div>
           </div>
+
           <div>
-            <label for="email">Електронна пошта:</label>
-            <input type="email" id="email" name="email" required />
+            <label
+              for="address"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Адреса доставки:</label
+            >
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+            ></textarea>
           </div>
+
           <div>
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" required />
-          </div>
-          <div>
-            <label for="confirm-password">Підтвердження пароля:</label>
+            <label
+              for="phone"
+              class="block text-sm font-medium text-gray-700 mb-1"
+              >Телефон:</label
+            >
             <input
-              type="password"
-              id="confirm-password"
-              name="confirm-password"
-              required
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+380 XX XXX XXXX"
+              class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
             />
           </div>
-          <div>
-            <label for="address">Адреса доставки:</label>
-            <textarea id="address" name="address" rows="3"></textarea>
+
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input
+                type="checkbox"
+                id="terms"
+                name="terms"
+                required
+                class="h-4 w-4 text-gray-600 focus:ring-gray-500 border-gray-300 rounded"
+              />
+            </div>
+            <div class="ml-3 text-sm">
+              <label for="terms" class="font-medium text-gray-700"
+                >Я погоджуюся з
+                <a href="#" class="text-gray-700 hover:text-gray-900"
+                  >умовами використання</a
+                ></label
+              >
+            </div>
           </div>
-          <div>
-            <label for="phone">Телефон:</label>
-            <input type="tel" id="phone" name="phone" />
+
+          <div class="pt-4">
+            <button
+              type="submit"
+              class="w-full bg-gray-700 text-white py-3 px-4 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors font-medium"
+            >
+              Зареєструватися
+            </button>
           </div>
-          <div>
-            <input type="checkbox" id="terms" name="terms" required />
-            <label for="terms">Я погоджуюся з умовами використання</label>
-          </div>
-          <button type="submit">Зареєструватися</button>
         </form>
+
+        <div class="mt-6 text-center">
+          <p class="text-sm text-gray-600">
+            Вже маєте обліковий запис?
+            <a
+              href="login.html"
+              class="text-gray-700 hover:text-gray-900 font-medium"
+              >Увійти</a
+            >
+          </p>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Lib&Art Project. Всі права захищені.</p>
-      <p>Контакти: info@libartproject.ua | +380 44 123 4567</p>
+    <footer class="bg-gray-800 text-white py-8 mt-auto">
+      <div class="container mx-auto px-4 text-center">
+        <p class="mb-2">&copy; 2025 Lib&Art Project. Всі права захищені.</p>
+        <p>
+          Контакти:
+          <a
+            href="mailto:info@libartproject.ua"
+            class="text-gray-300 hover:text-gray-100"
+            >info@libartproject.ua</a
+          >
+          | +380 44 123 4567
+        </p>
+      </div>
     </footer>
   </body>
 </html>
